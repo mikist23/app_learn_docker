@@ -30,7 +30,7 @@ app.get("/api/anime", async (req, res) => {
   res.json(anime);
 });
 
-app.post("/api/animes", async (req, res) => {
+app.post("/api/anime", async (req, res) => {
   const anime = new Anim(req.body);
   await anime.save();
   res.json(anime);
