@@ -30,13 +30,13 @@ app.get("/api/anime", async (req, res) => {
   res.json(anime);
 });
 
-app.post("/api/anime", async (req, res) => {
+app.post("/api/animes", async (req, res) => {
   const anime = new Anim(req.body);
   await anime.save();
   res.json(anime);
 });
 
-app.listen(8001, () => {
+app.listen(8000, () => {
   console.log("server listening on port 8000");
 
   // connect to the database
